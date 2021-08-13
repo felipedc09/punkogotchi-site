@@ -1,12 +1,13 @@
 import { FC, ReactElement } from 'react';
+import { CopyRight } from './footer.styles';
 
 const Footer: FC = (): ReactElement => (
-  <footer>
+  <CopyRight>
     ©
     {' '}
     {new Date().getFullYear()}
     , New Festival Town
-  </footer>
+  </CopyRight>
 );
 
 export default Footer;
