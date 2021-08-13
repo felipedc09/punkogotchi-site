@@ -3,7 +3,7 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:react/recommended", "airbnb"],
+  "extends": ["airbnb", "plugin:react/recommended", "plugin:@typescript-eslint/recommended"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -14,13 +14,25 @@
   },
   "plugins": ["react", "react-hooks", "@typescript-eslint"],
   "rules": {
+    "radix": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "react/require-default-props": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-unused-expressions": "off",
+    "react/jsx-uses-react": "error",
+    "import/no-unresolved": "off",
+    "react/jsx-uses-vars": "error",
+    "no-useless-catch": "off",
+    "no-unused-vars": "off",
+    "linebreak-style": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": [2, { "extensions": [".ts", ".tsx"] }],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": ["error"],
     "react/prop-types": "off",
     "import/prefer-default-export": "off",
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
-    "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
-    "no-shadow": "off",
-    "@typescript-eslint/no-shadow": ["error"],
     "@typescript-eslint/explicit-function-return-type": [
       "error",
       {
@@ -29,7 +41,6 @@
     ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "react/react-in-jsx-scope": 0,
-    "react/jsx-uses-react": 0
+    "import/extensions": "off"
   }
 }
