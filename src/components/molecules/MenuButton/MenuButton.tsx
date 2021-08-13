@@ -1,17 +1,31 @@
 import React, { FC, ReactElement } from 'react';
-import Image from 'next/image';
+import IconButton from '@/components/atoms/IconButton/IconButton';
 
 type Props = {
-  name: string;
-  iconPath: string;
+  view: { name: string };
+  size: Size;
 };
 const MenuButton: FC<Props> = (props): ReactElement => {
-  const { name, iconPath } = props;
+  const { view, size } = props;
+
+  function assignScale(): number {
+    switch (size) {
+      case 'large':
+        return 2;
+      case 'middle':
+        return 1.2;
+      case 'small':
+        return 0.5;
+      default:
+        return 1;
+    }
+  }
   return (
-    <button type="button">
-      {name}
-      <Image src={iconPath} alt="main town" height={50} width={50} />
-    </button>
+    <IconButton
+      text={view.name}
+      iconPath={`/static/icons/menuBar/${view.name.toLowerCase()}.svg`}
+      scale={assignScale()}
+    />
   );
 };
 
