@@ -14,4 +14,6 @@ export const NormalButton = styled.button`
     font-weight: bold;
     border: none;
     border-radius: 8px;
+    cursor: pointer;
+
 `;
