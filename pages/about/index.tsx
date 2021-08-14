@@ -67,11 +67,11 @@ const About: FC = (): ReactElement => (
         <Section>
           <Columns columnsCount={2}>
             <span>
-              <h2>WTF is CryptoArt?</h2>
+              <h3>WTF is CryptoArt?</h3>
               <p>It is art in the blockchain.</p>
             </span>
             <span>
-              <h2>WTF is a NFT?</h2>
+              <h3>WTF is a NFT?</h3>
               <p>
                 We don’t know what a NFT is, but we know it gives a lot of money... and we live for making money,
                 doesn’t everyone does?
