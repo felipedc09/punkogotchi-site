@@ -13,5 +13,8 @@ export const NormalInput = styled.input`
     border-radius: 8px;
     ::placeholder { 
         color: ${(props) => props.theme.colors.primary};
-}
+    }
+    :focus{
+        outline: none;
+    }
 `;
