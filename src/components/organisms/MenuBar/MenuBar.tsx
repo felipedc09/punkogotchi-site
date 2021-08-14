@@ -9,7 +9,6 @@ const MenuBar: FC = (): ReactElement => {
   function assignSize(viewName: string): Size {
     switch (viewName.toLowerCase()) {
       case 'play':
-      case 'roadmap':
         return 'middle';
       default:
         return 'normal';

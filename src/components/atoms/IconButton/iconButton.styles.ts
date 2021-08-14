@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
+export const Button = styled.a`
   display: grid;
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1fr 3fr;
   align-items: center;
-  background: none;
-  border:none;
-  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
   color:#fff;
+  font-size: 16px;
 `;

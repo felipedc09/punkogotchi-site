@@ -5,7 +5,9 @@ type BarProps ={
 }
 
 export const Bar = styled.div<BarProps>`
-    margin-top: 10px;
+    position: inherit;
+    width: 100%;
+    margin-top: 8px;
     display: grid;
     grid-template-columns: ${(props) => {
     let columns = '';
@@ -15,11 +17,7 @@ export const Bar = styled.div<BarProps>`
     return columns;
   }};
     column-gap: 10px;
-    justify-content: space-around;
     justify-items: center;
-    align-items: center;
-    position: inherit;
-    width: 100%;
-    height: 100px;
+    align-items: start;
 
 `;
