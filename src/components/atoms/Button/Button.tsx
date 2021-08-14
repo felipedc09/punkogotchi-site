@@ -8,7 +8,7 @@ type Props = {
 };
 
 const Button: FC<Props> = (props): ReactElement => {
-  const { text, color = '#9052BC', iconPath } = props;
+  const { text, iconPath } = props;
 
   function renderIcon(): ReactElement {
     if (iconPath) {
@@ -18,7 +18,7 @@ const Button: FC<Props> = (props): ReactElement => {
   }
 
   return (
-    <NormalButton color={color}>
+    <NormalButton>
       {text}
       {renderIcon()}
     </NormalButton>
