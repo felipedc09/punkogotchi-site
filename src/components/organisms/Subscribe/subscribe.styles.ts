@@ -14,5 +14,5 @@ export const Form = styled.form<FormProps>`
     bottom: 16px;
     right: 20px;
     width: 380px;
-    height: 38px;
+    height: 40px;
 `;

@@ -9,7 +9,7 @@ const topSpace = 64;
 export const Background = styled.div`
   min-width: 1024px;
   min-height: 768px;
-  background: #171516;
+  background: ${(props) => props.theme.colors.background};
   border-radius: 16px;
   position:relative;
 `;
