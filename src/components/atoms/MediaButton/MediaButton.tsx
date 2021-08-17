@@ -11,8 +11,8 @@ const MediaButton: FC<Props> = (props): ReactElement => {
   const { name, imagePath, href } = props;
 
   return (
-    <Link href={href}>
-      <a>
+    <Link passHref href={href}>
+      <a href={href}>
         <img src={imagePath} alt={name} />
       </a>
     </Link>
