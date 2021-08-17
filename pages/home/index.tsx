@@ -1,6 +1,6 @@
 import { FC, ReactElement } from 'react';
-import HomeTemplate from '@/components/templates/Home/HomeTemplate';
+import MainTemplate from '@/components/templates/Main/MainTemplate';
 
-const Home: FC = (): ReactElement => <HomeTemplate />;
+const Home: FC = (): ReactElement => <MainTemplate page="Home" />;
 
 export default Home;
