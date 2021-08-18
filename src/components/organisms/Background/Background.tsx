@@ -2,7 +2,7 @@ import { FC, ReactElement } from 'react';
 import { Container } from './background.styles';
 
 type Props = {
-  children: ReactElement[];
+  children: ReactElement[] | ReactElement;
 };
 
 const Background: FC<Props> = (props): ReactElement => {
