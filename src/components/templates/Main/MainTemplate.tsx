@@ -1,18 +1,20 @@
 import { FC, ReactElement } from 'react';
+import Link from 'next/link';
 import Footer from '@/organisms/Footer/Footer';
 import Header from '@/organisms/Header/Header';
 import Window from '@/components/organisms/Window/Window';
 import Background from '@/components/organisms/Background/Background';
 import MediaBar from '@/components/organisms/MediaBar/MediaBar';
 import Subscribe from '@/components/organisms/Subscribe/Subscribe';
-import { Container } from './mainTemplate.styles';
+import { Container, ToHomeLink } from './mainTemplate.styles';
 
 type Props = {
   page: string;
+  withHomeLink?: boolean;
 };
 
 const MainTemplate: FC<Props> = (props): ReactElement => {
-  const { page, children } = props;
+  const { page, withHomeLink = true, children } = props;
   return (
     <Background>
       <Container>
@@ -21,6 +23,15 @@ const MainTemplate: FC<Props> = (props): ReactElement => {
           {children}
           <MediaBar />
           <Subscribe />
+          {withHomeLink && (
+            <ToHomeLink>
+              <Link passHref href="/home">
+                <a href="/home">
+                  <img src="/static/images/logoHome.png" alt="Logo home" />
+                </a>
+              </Link>
+            </ToHomeLink>
+          )}
         </Window>
         <Footer />
       </Container>

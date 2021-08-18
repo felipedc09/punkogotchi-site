@@ -1,6 +1,6 @@
 import { FC, ReactElement } from 'react';
 import MenuBar from '../MenuBar/MenuBar';
-import { Background, ImageBackground } from './window.styles';
+import { Container, BackgroundImage } from './window.styles';
 
 type Props = {
   imagePath: string;
@@ -9,11 +9,11 @@ type Props = {
 const Window: FC<Props> = (props): ReactElement => {
   const { imagePath, children } = props;
   return (
-    <Background>
-      <ImageBackground imagePath={imagePath} />
+    <Container>
+      <BackgroundImage imagePath={imagePath} />
       <MenuBar />
       {children}
-    </Background>
+    </Container>
   );
 };
 

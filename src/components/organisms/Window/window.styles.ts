@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-type ImageBackgroundProps = {
+type ImageContainerdProps = {
     imagePath: string;
 }
 
 const topSpace = 64;
 
-export const Background = styled.div`
+export const Container = styled.div`
   min-width: 1024px;
   min-height: 768px;
   background: ${(props) => props.theme.colors.background};
@@ -14,7 +14,7 @@ export const Background = styled.div`
   position:relative;
 `;
 
-export const ImageBackground = styled.div<ImageBackgroundProps>`
+export const BackgroundImage = styled.div<ImageContainerdProps>`
   position:absolute;
   bottom:0;
   top:0;
