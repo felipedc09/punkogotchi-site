@@ -18,7 +18,7 @@ const MainTemplate: FC<Props> = (props): ReactElement => {
   return (
     <Background>
       <Container>
-        {/* <Header title={page} />
+        <Header title={page} />
         <Window imagePath={`/static/images/${page.toLowerCase()}/${page.toLowerCase()}Background.png`}>
           {children}
           <MediaBar />
@@ -32,7 +32,7 @@ const MainTemplate: FC<Props> = (props): ReactElement => {
               </Link>
             </ToHomeLink>
           )}
-        </Window> */}
+        </Window>
         <Footer />
       </Container>
     </Background>

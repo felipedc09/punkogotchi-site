@@ -18,11 +18,3 @@ export const Image = styled.img<ImageProps>`
   bottom: ${(props) => (props.position ? props.position : 20)}%;
   width: 100%;
   `;
-
-export const FrontImage = styled.div<ImageProps>`
-  position:absolute;
-  background: url("/static/images/frontBackground.svg") no-repeat top left;
-  background-size: contain;
-  width: 100%;
-  height: 100%;
-`;
