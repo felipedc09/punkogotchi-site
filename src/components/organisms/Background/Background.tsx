@@ -1,5 +1,5 @@
 import { FC, ReactElement } from 'react';
-import { Container, FrontImage, Image, ScalingSvg, ScalingSvgContainer } from './background.styles';
+import { Container, Image } from './background.styles';
 
 type Props = {
   children: ReactElement[] | ReactElement;
