@@ -15,6 +15,8 @@ export const Container = styled.div<ContainerProps>`
 
 export const Image = styled.img<ImageProps>`
   position:absolute;
-  bottom: ${(props) => (props.position ? props.position : 20)}%;
-  width: 100%;
+  top:0;
+  bottom: 0;
+  height: 100%;
+  width:100%
   `;

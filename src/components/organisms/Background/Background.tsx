@@ -9,12 +9,12 @@ const Background: FC<Props> = (props): ReactElement => {
   const { children } = props;
   const sunriseColor = '#42BFE8';
   const twilightSkyColor = '#f6d896';
-  const duskSkyColor = '#171715';
+  const duskSkyColor = '#595955';
 
   function changeSkyColor(): string {
     const dayHour = new Date().getHours();
 
-    if (dayHour > 18 || dayHour < 5) {
+    if (dayHour > 17 || dayHour < 5) {
       return duskSkyColor;
     }
     if (dayHour > 5 && dayHour < 12) {
@@ -31,8 +31,8 @@ const Background: FC<Props> = (props): ReactElement => {
       <Image src="/static/images/mainMountainsFront.png" alt="Front mountains" />
       <Image src="/static/images/mainTownBack.png" alt="Back town" />
       <Image src="/static/images/mainTownMiddle.png" alt="Middle town" />
-      {/* <Image position="0" height="1920" width="720" src="/static/images/frontBackground.svg" alt="Clouds" /> */}
       {children}
+      <Image src="/static/images/frontBackground.png" alt="Clouds" />
     </Container>
   );
 };
