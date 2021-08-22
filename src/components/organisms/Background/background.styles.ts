@@ -13,7 +13,7 @@ type AnimationProps={
 }
 
 export const Container = styled.div<ContainerProps>`
-  position: absolute;
+  position: relative;
   width: 100vw;
   height: 100vh;
   background: linear-gradient(180deg, ${(props) => props.skyColor} 50%, rgba(156,139,219,1) 50%);
@@ -37,19 +37,30 @@ export const BackgroundContent = styled.div`
   ::-webkit-scrollbar {
     display:none;
   }
-`;
+  `;
 
 export const ParallaxContent = styled.div<AnimationProps>`
   margin-left: -1px;
   animation: background-shift ${({ speed = 50 }) => speed}s linear infinite forwards;
-
+  
   @keyframes background-shift {
     to {
       transform: translateX(-100%);
     }
   }
-`;
+  `;
 
 export const Image = styled.img<ImageProps>`
+  position: absolute;
   width: 100%;
+  height: 100%;
+`;
+
+export const ImageBackground = styled.img<ImageProps>`
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  background: url('/static/images/frontBackground.png');
+  background-repeat: round;
 `;

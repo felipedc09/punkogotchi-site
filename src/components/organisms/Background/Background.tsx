@@ -2,18 +2,9 @@ import { FC, ReactElement } from 'react';
 import {
   Image,
   Container,
-  Animation,
-  Content,
-  Slide,
-  Three,
-  Four,
-  ContainerParallax,
-  Wrapper,
-  OuterWrapper,
   BackgroundContent,
   ParallaxContent,
-  ParallaxContent1,
-  ParallaxContent2,
+  ImageBackground,
 } from './background.styles';
 
 type Props = {
@@ -59,6 +50,7 @@ const Background: FC<Props> = (props): ReactElement => {
       {renderParallaxImage('Front mountains', '/static/images/mainMountainsFront.png', 40)}
       {renderParallaxImage('Back town', '/static/images/mainTownBack.png', 35)}
       {renderParallaxImage('Back mountains', '/static/images/mainTownMiddle.png', 30)}
+      <ImageBackground />
       {children}
     </Container>
   );
