@@ -13,6 +13,7 @@ const Header: FC<Props> = (props): ReactElement => {
       <title>{title}</title>
       <meta name="description" content="Cryptogame" />
       <link rel="icon" href="/favicon.ico" />
+      <link rel="preload" href="/static/fonts/aweMonoV1/AweMono.ttf" as="font" crossOrigin="" />
     </Head>
   );
 };

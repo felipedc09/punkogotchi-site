@@ -9,7 +9,7 @@ export const NormalButton = styled.button`
     justify-items: center;;
     background-color: ${(props) => props.theme.colors.primary};
     color: #F8F644;
-    font-size: 18px;
+    font-family: ${(props) => props.theme.fonts.primary};
     font-style: normal;
     font-weight: bold;
     border: none;

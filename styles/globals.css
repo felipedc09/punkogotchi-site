@@ -2,8 +2,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Montserrat;
-  font-size: 16px;
+  font-size: large;
 }
 
 a {
@@ -13,4 +12,12 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "EBGaramond";
+  src: url("/static/fonts/aweMonoV1/AweMono.ttf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
 }

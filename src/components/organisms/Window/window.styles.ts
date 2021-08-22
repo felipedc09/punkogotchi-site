@@ -6,7 +6,7 @@ type ImageContainerdProps = {
 
 const topSpace = 64;
 
-export const Container = styled.div`
+export const Container = styled.main`
   min-width: 1024px;
   min-height: 768px;
   background: ${(props) => props.theme.colors.background};

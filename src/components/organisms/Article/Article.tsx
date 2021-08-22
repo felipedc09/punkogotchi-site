@@ -1,5 +1,5 @@
 import { FC, ReactElement } from 'react';
-import { Article } from './article.styles';
+import { Section } from './article.styles';
 
 type Props = {
   children?: ReactElement[] | string;
@@ -8,7 +8,7 @@ type Props = {
 const ArticleC: FC<Props> = (props): ReactElement => {
   const { children } = props;
 
-  return <Article>{children}</Article>;
+  return <Section>{children}</Section>;
 };
 
 export default ArticleC;

@@ -3,10 +3,12 @@ import { CopyRight } from './footer.styles';
 
 const Footer: FC = (): ReactElement => (
   <CopyRight>
-    ©
-    {' '}
-    {new Date().getFullYear()}
-    , New Festival Town
+    <h2>
+      ©
+      {' '}
+      {new Date().getFullYear()}
+      , New Festival Town
+    </h2>
   </CopyRight>
 );
 

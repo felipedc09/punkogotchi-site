@@ -8,10 +8,10 @@ export const NormalInput = styled.input`
     background-color:${(props) => props.theme.colors.background};
     border:solid ${(props) => props.theme.colors.primary} 2px;
     color: ${(props) => props.theme.colors.primary};
-    font-size: 16px;
     font-style: normal;
     border-radius: 8px;
     ::placeholder { 
+        font-family: ${(props) => props.theme.fonts.primary};
         color: ${(props) => props.theme.colors.primary};
     }
     :focus{

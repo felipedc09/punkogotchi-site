@@ -7,6 +7,5 @@ export const Button = styled.a`
   text-align: center;
   text-decoration: none;
   color:#fff;
-  font-size: 16px;
   cursor: pointer;
 `;
