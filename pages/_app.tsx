@@ -2,15 +2,13 @@ import { ReactElement } from 'react';
 import type { AppProps } from 'next/app';
 import { ThemeProvider } from 'styled-components';
 import { theme } from 'styles/Theme';
-import { Body } from '../styles/app.styles';
-import '../styles/globals.css';
+import { GlobalStyle } from '../styles/globals.styles';
 
 function MyApp({ Component, pageProps }: AppProps): ReactElement {
   return (
     <ThemeProvider theme={theme}>
-      <Body>
-        <Component {...pageProps} />
-      </Body>
+      <GlobalStyle />
+      <Component {...pageProps} />
     </ThemeProvider>
   );
 }
