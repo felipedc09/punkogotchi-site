@@ -25,4 +25,11 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
     font-display: swap;
   }
+  @font-face {
+    font-family: "Montserrat";
+    src: url("/static/fonts/Montserrat/Montserrat-Medium.ttf");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+  }
 `;

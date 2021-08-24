@@ -1,6 +1,7 @@
 const theme = {
   fonts: {
-    primary: 'EBGaramond',
+    primary: 'Montserrat',
+    secondary: 'EBGaramond',
   },
   colors: {
     background: '#171516',
