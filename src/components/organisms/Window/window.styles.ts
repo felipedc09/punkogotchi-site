@@ -7,11 +7,12 @@ type ImageContainerdProps = {
 const topSpace = 64;
 
 export const Container = styled.main`
-  min-width: 1024px;
-  min-height: 768px;
+  position:relative;
+  margin: auto;
+  width: 1024px;
+  height: 768px;
   background: ${(props) => props.theme.colors.background};
   border-radius: 16px;
-  position:relative;
 `;
 
 export const BackgroundImage = styled.div<ImageContainerdProps>`

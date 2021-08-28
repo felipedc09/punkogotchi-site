@@ -8,6 +8,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: ${(props) => props.theme.colors.foreGroundBackground};
 `;
 
 export const ToHomeLink = styled.div`

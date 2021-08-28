@@ -14,8 +14,13 @@ type AnimationProps={
 
 export const Container = styled.div<ContainerProps>`
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+  max-width: 1920px;
+  max-height: 1080px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background: linear-gradient(180deg, ${(props) => props.skyColor} 50%, rgba(156,139,219,1) 50%);
   overflow: hidden;
   scrollbar-width: none;
@@ -29,7 +34,7 @@ export const BackgroundContent = styled.div`
   position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 200vw;
+  width: 200%;
   height: 100%;
   overflow-x: hidden;
   scrollbar-width: none;

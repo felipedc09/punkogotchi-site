@@ -16,8 +16,8 @@ type Props = {
 const MainTemplate: FC<Props> = (props): ReactElement => {
   const { page, withHomeLink = true, children } = props;
   return (
-    <Background>
-      <Container>
+    <Container>
+      <Background>
         <Header title={page} />
         <Window imagePath={`/static/images/${page.toLowerCase()}/${page.toLowerCase()}Background.png`}>
           {children}
@@ -34,8 +34,8 @@ const MainTemplate: FC<Props> = (props): ReactElement => {
           )}
         </Window>
         <Footer />
-      </Container>
-    </Background>
+      </Background>
+    </Container>
   );
 };
 
