@@ -12,12 +12,16 @@ type AnimationProps={
   speed?: number
 }
 
+type ForegroundProps={
+  side: string
+
+}
+
 export const Container = styled.div<ContainerProps>`
   position: relative;
+  max-width: 1440px;
   width: 100%;
-  height: 100%;
-  max-width: 1920px;
-  max-height: 1080px;
+  height: 1080px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,6 +63,26 @@ export const Image = styled.img<ImageProps>`
   position: absolute;
   width: 100%;
   height: 100%;
+`;
+
+export const Foreground = styled.img<ForegroundProps>`
+  position: absolute;
+  ${(props):string => {
+    switch (props.side) {
+      case 'left':
+        return 'left: 0';
+      case 'bottom':
+        return 'bottom: 0; height:180px; width: 100%';
+      case 'right':
+        return 'right: 0; bottom: 180px;';
+      case 'top-right':
+        return 'top: 0; right: 0;';
+      case 'top-left':
+        return 'top: 0; left: 0;';
+      default:
+        return 'left: 0';
+    }
+  }}
 `;
 
 export const ImageBackground = styled.img<ImageProps>`

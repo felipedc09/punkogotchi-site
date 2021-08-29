@@ -1,5 +1,5 @@
 import { FC, ReactElement } from 'react';
-import { Image, Container, BackgroundContent, ParallaxContent, ImageBackground } from './background.styles';
+import { Image, Container, BackgroundContent, ParallaxContent, Foreground } from './background.styles';
 
 type Props = {
   children: ReactElement[] | ReactElement;
@@ -44,8 +44,12 @@ const Background: FC<Props> = (props): ReactElement => {
       {renderParallaxImage('Front mountains', '/static/images/mainMountainsFront.png', 40)}
       {renderParallaxImage('Back town', '/static/images/mainTownBack.png', 35)}
       {renderParallaxImage('Back mountains', '/static/images/mainTownMiddle.png', 30)}
-      <Image src="/static/images/frontBackground.png" alt="Foreground" />
       {children}
+      <Foreground side="left" src="/static/images/mainFgLeft.png" alt="Foreground left" />
+      <Foreground side="right" src="/static/images/mainFgRight.png" alt="Foreground right" />
+      <Foreground side="top-left" src="/static/images/mainFgTop_left.png" alt="Foreground top left" />
+      <Foreground side="top-right" src="/static/images/mainFgTop_right.png" alt="Foreground top right" />
+      <Foreground side="bottom" src="/static/images/mainFgBottom.png" alt="Foreground top right" />
     </Container>
   );
 };

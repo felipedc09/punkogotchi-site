@@ -7,7 +7,11 @@ type ImageContainerdProps = {
 const topSpace = 64;
 
 export const Container = styled.main`
-  position:relative;
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   margin: auto;
   width: 1024px;
   height: 768px;

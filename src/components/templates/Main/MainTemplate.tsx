@@ -33,8 +33,8 @@ const MainTemplate: FC<Props> = (props): ReactElement => {
             </ToHomeLink>
           )}
         </Window>
-        <Footer />
       </Background>
+      <Footer />
     </Container>
   );
 };
