@@ -5,7 +5,7 @@ type BarProps ={
 }
 
 export const Bar = styled.div<BarProps>`
-    position: inherit;
+    position: relative;
     width: 100%;
     margin-top: 8px;
     display: grid;
@@ -19,5 +19,5 @@ export const Bar = styled.div<BarProps>`
     column-gap: 10px;
     justify-items: center;
     align-items: start;
-
+    z-index: 2
 `;
