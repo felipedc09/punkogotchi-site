@@ -11,5 +11,8 @@ export const Screen = styled.div`
     align-items: center;
 `;
 
-export const RoadmapImage = styled.img`
+export const Crystal = styled.img`
+position: absolute;
+    top: 100px;
+    right: 90px;
 `;
