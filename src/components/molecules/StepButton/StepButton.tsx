@@ -1,10 +1,14 @@
-import React, { Dispatch, FC, ReactElement, SetStateAction } from 'react';
+import React, {
+  Dispatch, FC, ReactElement, SetStateAction,
+} from 'react';
 import { Button } from '@/components/atoms/IconButton/iconButton.styles';
 import { StepImage } from './stepButton.styles';
 
 export type Step = {
   name: string;
   status: 'done' | 'progress' | 'to do';
+  title: string
+  description: string
   image: string;
 };
 
