@@ -13,7 +13,7 @@ export type Step = {
 type Props = {
   step: Step;
   position: number;
-  onClick: Dispatch<SetStateAction<Step | null>>;
+  onClick: Dispatch<SetStateAction<Step>>;
 };
 
 const StepButton: FC<Props> = (props): ReactElement => {
