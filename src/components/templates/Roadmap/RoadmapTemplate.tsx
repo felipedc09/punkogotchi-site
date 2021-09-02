@@ -2,20 +2,11 @@ import { FC, ReactElement, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import MainTemplate from '@/components/templates/Main/MainTemplate';
 import StepButton, { Step } from '@/components/molecules/StepButton/StepButton';
-import {
-  Border,
-  CheckboxContainer,
-  Crystal,
-  HiddenCheckbox,
-  Icon,
-  Screen,
-  StepItem,
-  StepList,
-  StyledCheckbox,
-} from './roadmapTemplate.styles';
+import { Border, Crystal, Screen, StepItem, StepList } from './roadmapTemplate.styles';
+import Checkbox from '@/components/atoms/Checkbox/Checkbox';
 
 const RoadmapTemplate: FC = (): ReactElement => {
-  const [imageStep, setImageStep] = useState('roadmapStep_1');
+  const [currentStep, setCurrentStep] = useState<Step | null>(null);
   const steps: Step[] = [
     {
       name: '1',
@@ -68,27 +59,41 @@ const RoadmapTemplate: FC = (): ReactElement => {
     },
   ];
 
+  function getColorByStepStatus(step: Step): string {
+    switch (step.status) {
+      case 'done':
+        return '#8FD032';
+      case 'progress':
+        return '#F8C53A';
+      default:
+        return '#FFF';
+    }
+  }
+
   function createSteps(): ReactElement[] {
     let position = 205;
     const increment = 42;
     return steps.map((step) => {
       position += increment;
-      return <StepButton onClick={setImageStep} position={position} key={uuidv4()} step={step} />;
+      return <StepButton key={uuidv4()} onClick={setCurrentStep} position={position} step={step} />;
     });
   }
 
   function createStepItems(): ReactElement[] {
     return steps.map((step) => (
       <>
-        <StepItem key={uuidv4()} step={step}>
+        <StepItem
+          key={uuidv4()}
+          color={getColorByStepStatus(step)}
+          active={currentStep?.name === step.name}
+          onClick={() => {
+            setCurrentStep(step);
+          }}
+        >
           <span>
             <strong>{step.title}:</strong> {step.description}
           </span>
-          {/* <CheckboxContainer>
-            <input type="checkbox" checked={step.status === 'done'} />
-            <Checkbox step={step} />
-          </CheckboxContainer> */}
-          <div>{Checkbox(step.status === 'done', step)}</div>
+          <Checkbox checked={step.status === 'done'} color={getColorByStepStatus(step)} />
         </StepItem>
         <Border />
       </>
@@ -100,22 +105,11 @@ const RoadmapTemplate: FC = (): ReactElement => {
       <StepList>{createStepItems()}</StepList>
       {createSteps()}
       <Screen>
-        <img src={`/static/images/roadmap/${imageStep}.png`} alt="Current step" />
+        <img src={`/static/images/roadmap/${currentStep?.image}.png`} alt="Current step" />
       </Screen>
       <Crystal src="/static/images/roadmap/roadmapCrystal.png" alt="Crystal" />
     </MainTemplate>
   );
 };
-
-const Checkbox = (checked, step): ReactElement => (
-  <CheckboxContainer>
-    <HiddenCheckbox checked={checked} />
-    <StyledCheckbox step={step} checked={checked}>
-      <Icon viewBox="0 0 24 24">
-        <polyline points="20 6 9 17 4 12" />
-      </Icon>
-    </StyledCheckbox>
-  </CheckboxContainer>
-);
 
 export default RoadmapTemplate;
