@@ -38,12 +38,12 @@ const Background: FC<Props> = (props): ReactElement => {
 
   return (
     <Container skyColor={changeSkyColor()}>
-      {renderParallaxImage('Clouds', '/static/images/mainClouds.png', 100)}
-      {renderParallaxImage('Back mountains', '/static/images/mainMountainsBack.png', 80)}
-      {renderParallaxImage('Middle mountains', '/static/images/mainMountainsMiddle.png', 65)}
-      {renderParallaxImage('Front mountains', '/static/images/mainMountainsFront.png', 40)}
-      {renderParallaxImage('Back town', '/static/images/mainTownBack.png', 35)}
-      {renderParallaxImage('Back mountains', '/static/images/mainTownMiddle.png', 30)}
+      {renderParallaxImage('Clouds', '/static/images/mainClouds.png', 400)}
+      {renderParallaxImage('Back mountains', '/static/images/mainMountainsBack.png', 300)}
+      {renderParallaxImage('Middle mountains', '/static/images/mainMountainsMiddle.png', 260)}
+      {renderParallaxImage('Front mountains', '/static/images/mainMountainsFront.png', 200)}
+      {renderParallaxImage('Back town', '/static/images/mainTownBack.png', 160)}
+      {renderParallaxImage('Back mountains', '/static/images/mainTownMiddle.png', 100)}
       {children}
       <Foreground side="left" src="/static/images/mainFgLeft.png" alt="Foreground left" />
       <Foreground side="right" src="/static/images/mainFgRight.png" alt="Foreground right" />

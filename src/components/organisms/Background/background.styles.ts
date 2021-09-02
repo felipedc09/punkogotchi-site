@@ -38,7 +38,7 @@ export const BackgroundContent = styled.div`
   position: absolute;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 200%;
+  width: 5760px;
   height: 100%;
   overflow-x: hidden;
   scrollbar-width: none;
@@ -85,11 +85,3 @@ export const Foreground = styled.img<ForegroundProps>`
   }}
 `;
 
-export const ImageBackground = styled.img<ImageProps>`
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  height: 100%;
-  background: url('/static/images/frontBackground.png');
-  background-repeat: round;
-`;
