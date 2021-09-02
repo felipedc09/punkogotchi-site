@@ -1,6 +1,6 @@
 import { FC, ReactElement } from 'react';
-import MainTemplate from '@/components/templates/Main/MainTemplate';
+import RoadmapTemplate from '@/components/templates/Roadmap/RoadmapTemplate';
 
-const Roadmap: FC = (): ReactElement => <MainTemplate page="Roadmap" />;
+const Roadmap: FC = (): ReactElement => <RoadmapTemplate />;
 
 export default Roadmap;
