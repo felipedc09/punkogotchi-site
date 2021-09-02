@@ -5,59 +5,60 @@ import StepButton, { Step } from '@/components/molecules/StepButton/StepButton';
 import { Border, Crystal, Screen, StepItem, StepList } from './roadmapTemplate.styles';
 import Checkbox from '@/components/atoms/Checkbox/Checkbox';
 
+const steps: Step[] = [
+  {
+    name: '1',
+    status: 'done',
+    title: 'Q1 2021',
+    description: 'Define initial game and mechanics.',
+    image: 'roadmapStep_1',
+  },
+  {
+    name: '2',
+    status: 'progress',
+    title: 'Q2 2021',
+    description: 'Create smart contracts ERC20.',
+    image: 'roadmapStep_2',
+  },
+  {
+    name: '3',
+    status: 'to do',
+    title: 'Q3 2021',
+    description: 'Launch website and demo.',
+    image: 'roadmapStep_3',
+  },
+  {
+    name: '4',
+    status: 'to do',
+    title: 'Q4 2021',
+    description: 'Launch apartment decoration.',
+    image: 'roadmapStep_4',
+  },
+  {
+    name: '5',
+    status: 'to do',
+    title: 'Q1 2022',
+    description: 'Launch town exploration.',
+    image: 'roadmapStep_5',
+  },
+  {
+    name: '6',
+    status: 'to do',
+    title: 'Q3 2022',
+    description: 'Launch crafting and pets.',
+    image: 'roadmapStep_6',
+  },
+  {
+    name: '7',
+    status: 'to do',
+    title: 'Q1 2023',
+    description: 'Launch inter-town traveling.',
+    image: 'roadmapStep_7',
+  },
+];
+
 const RoadmapTemplate: FC = (): ReactElement => {
-  const [currentStep, setCurrentStep] = useState<Step | null>(null);
-  const steps: Step[] = [
-    {
-      name: '1',
-      status: 'done',
-      title: 'Q1 2021',
-      description: 'Define initial game and mechanics.',
-      image: 'roadmapStep_1',
-    },
-    {
-      name: '2',
-      status: 'progress',
-      title: 'Q2 2021',
-      description: 'Create smart contracts ERC20.',
-      image: 'roadmapStep_2',
-    },
-    {
-      name: '3',
-      status: 'to do',
-      title: 'Q3 2021',
-      description: 'Launch website and demo.',
-      image: 'roadmapStep_3',
-    },
-    {
-      name: '4',
-      status: 'to do',
-      title: 'Q4 2021',
-      description: 'Launch apartment decoration.',
-      image: 'roadmapStep_4',
-    },
-    {
-      name: '5',
-      status: 'to do',
-      title: 'Q1 2022',
-      description: 'Launch town exploration.',
-      image: 'roadmapStep_5',
-    },
-    {
-      name: '6',
-      status: 'to do',
-      title: 'Q3 2022',
-      description: 'Launch crafting and pets.',
-      image: 'roadmapStep_6',
-    },
-    {
-      name: '7',
-      status: 'to do',
-      title: 'Q1 2023',
-      description: 'Launch inter-town traveling.',
-      image: 'roadmapStep_7',
-    },
-  ];
+  const [currentStep, setCurrentStep] = useState<Step>(steps[0]);
 
   function getColorByStepStatus(step: Step): string {
     switch (step.status) {
