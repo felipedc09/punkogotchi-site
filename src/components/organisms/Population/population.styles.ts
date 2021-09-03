@@ -10,7 +10,7 @@ export const Container = styled.div`
     width: 300px;
     height: 30px;
     bottom: 120px;
-    right: 190px;
+    right: 350px;
     font-family: ${(props) => props.theme.fonts.secondary};
     font-size: xx-large;
     color: ${(props) => props.theme.colors.background}
