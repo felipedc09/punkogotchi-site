@@ -4,9 +4,13 @@ type ImageContainerdProps = {
     imagePath: string;
 }
 
+type ContainerdProps = {
+    withBackground?: boolean;
+}
+
 const topSpace = 64;
 
-export const Container = styled.main`
+export const Container = styled.main<ContainerdProps>`
   position:relative;
   top: 0;
   left: 0;
@@ -15,7 +19,12 @@ export const Container = styled.main`
   margin: auto;
   width: 1024px;
   height: 768px;
-  background: ${(props) => props.theme.colors.background};
+  ${props=>{
+    if(props.withBackground){
+       return`  background: ${props.theme.colors.background};`
+    }
+    return ''
+  }}
   border-radius: 16px;
 `;
 
@@ -29,3 +38,12 @@ export const BackgroundImage = styled.div<ImageContainerdProps>`
   background-image: url(${(props) => props.imagePath});
   background-repeat: no-repeat;
 `;
+
+export const FooterContainer = styled.div`
+    position:absolute;
+    bottom:0;
+    width: 100%;
+    height: 64px;
+    border-radius: 0px 0px 16px 16px;
+    background: ${(props) => props.theme.colors.background};
+`

@@ -7,7 +7,8 @@ type BarProps ={
 export const Bar = styled.div<BarProps>`
     position: relative;
     width: 100%;
-    margin-top: 8px;
+    height: 70px;
+    padding-top: 8px;
     display: grid;
     grid-template-columns: ${(props) => {
     let columns = '';
@@ -19,5 +20,7 @@ export const Bar = styled.div<BarProps>`
     column-gap: 10px;
     justify-items: center;
     align-items: start;
-    z-index: 2
+    border-radius: 16px 16px 0px 0px;
+    background-color: ${(props) => props.theme.colors.background};
+    z-index: 2;
 `;

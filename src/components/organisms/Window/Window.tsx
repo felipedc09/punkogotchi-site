@@ -1,17 +1,19 @@
 import { FC, ReactElement } from 'react';
 import MenuBar from '../MenuBar/MenuBar';
-import { Container, BackgroundImage } from './window.styles';
+import { Container, BackgroundImage, FooterContainer } from './window.styles';
 
 type Props = {
   imagePath: string;
+  withBackground?: boolean;
 };
 
 const Window: FC<Props> = (props): ReactElement => {
-  const { imagePath, children } = props;
+  const { imagePath, children, withBackground } = props;
   return (
-    <Container>
+    <Container withBackground={withBackground}>
       <BackgroundImage imagePath={imagePath} />
       <MenuBar />
+      <FooterContainer />
       {children}
     </Container>
   );

@@ -19,7 +19,10 @@ const MainTemplate: FC<Props> = (props): ReactElement => {
     <Container>
       <Background>
         <Header title={page} />
-        <Window imagePath={`/static/images/${page.toLowerCase()}/${page.toLowerCase()}Background.png`}>
+        <Window
+          withBackground={withHomeLink}
+          imagePath={`/static/images/${page.toLowerCase()}/${page.toLowerCase()}Background.png`}
+        >
           {children}
           <MediaBar />
           <Subscribe />
