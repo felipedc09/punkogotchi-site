@@ -13,18 +13,6 @@ const MediaBar: FC = (): ReactElement => {
       name: 'Twitter',
       href: '#',
     },
-    {
-      name: 'Facebook',
-      href: '#',
-    },
-    {
-      name: 'Instagram',
-      href: '#',
-    },
-    {
-      name: 'OpenSea',
-      href: '#',
-    },
   ];
 
   function createMediaButtons(): ReactElement[] {
