@@ -15,21 +15,21 @@ const steps: Step[] = [
   },
   {
     name: '2',
-    status: 'progress',
+    status: 'done',
     title: 'Q2 2021',
     description: 'Create smart contracts ERC20.',
     image: 'roadmapStep_2',
   },
   {
     name: '3',
-    status: 'to do',
+    status: 'done',
     title: 'Q3 2021',
     description: 'Launch website and demo.',
     image: 'roadmapStep_3',
   },
   {
     name: '4',
-    status: 'to do',
+    status: 'progress',
     title: 'Q4 2021',
     description: 'Launch apartment decoration.',
     image: 'roadmapStep_4',
@@ -82,9 +82,8 @@ const RoadmapTemplate: FC = (): ReactElement => {
 
   function createStepItems(): ReactElement[] {
     return steps.map((step) => (
-      <>
+      <span key={uuidv4()}>
         <StepItem
-          key={uuidv4()}
           color={getColorByStepStatus(step)}
           active={currentStep?.name === step.name}
           onClick={() => {
@@ -97,7 +96,7 @@ const RoadmapTemplate: FC = (): ReactElement => {
           <Checkbox checked={step.status === 'done'} color={getColorByStepStatus(step)} />
         </StepItem>
         <Border />
-      </>
+      </span>
     ));
   }
 
