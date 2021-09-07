@@ -38,7 +38,10 @@ const Background: FC<Props> = (props): ReactElement => {
 
   return (
     <Container skyColor={changeSkyColor()}>
-      {renderParallaxImage('Clouds', '/static/images/mainClouds.png', 400)}
+      {renderParallaxImage('Clouds', '/static/images/mainClouds4.png', 600)}
+      {renderParallaxImage('Clouds', '/static/images/mainClouds3.png', 550)}
+      {renderParallaxImage('Clouds', '/static/images/mainClouds2.png', 500)}
+      {renderParallaxImage('Clouds', '/static/images/mainClouds1.png', 400)}
       {renderParallaxImage('Back mountains', '/static/images/mainMountainsBack.png', 300)}
       {renderParallaxImage('Middle mountains', '/static/images/mainMountainsMiddle.png', 260)}
       {renderParallaxImage('Front mountains', '/static/images/mainMountainsFront.png', 200)}
