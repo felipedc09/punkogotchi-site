@@ -1,6 +1,6 @@
 import { FC, ReactElement } from 'react';
-import MainTemplate from '@/components/templates/Main/MainTemplate';
+import TicketsTemplate from '@/components/templates/Tickets/TicketsTemplate';
 
-const Tickets: FC = (): ReactElement => <MainTemplate page="Tickets" />;
+const Tickets: FC = (): ReactElement => <TicketsTemplate />;
 
 export default Tickets;
