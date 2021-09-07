@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 type CheckboxProps = {
-    checked: boolean
+    defaultChecked: boolean
     color: string
 }
 
@@ -16,7 +16,7 @@ export const Icon = styled.svg`
     stroke-width: 2px;
 `;
 
-export const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
+export const HiddenCheckbox = styled.input.attrs({ type: 'checkbox', readOnly: true })`
     border: 0;
     clip: rect(0 0 0 0);
     height: 1px;
@@ -38,6 +38,6 @@ export const StyledCheckbox = styled.div<CheckboxProps>`
     transition: all 150ms;
     ${Icon} {
         stroke :${(props) => props.color};
-        visibility: ${(props) => (props.checked ? 'visible' : 'hidden')}
+        visibility: ${(props) => (props.defaultChecked ? 'visible' : 'hidden')}
     }
 `;
