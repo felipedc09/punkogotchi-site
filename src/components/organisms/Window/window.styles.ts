@@ -26,6 +26,7 @@ export const Container = styled.main<ContainerdProps>`
     return ''
   }}
   border-radius: 16px;
+  overflow: auto;
 `;
 
 export const BackgroundImage = styled.div<ImageContainerdProps>`

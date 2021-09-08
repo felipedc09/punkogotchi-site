@@ -3,16 +3,15 @@ import styled from 'styled-components';
 export const Screen = styled.img`
   position: relative;
   left: 45px;
-  width: 426px;
   animation: screen 3s forwards;
   animation-direction: normal;
 
 @keyframes screen {
   0% {
-    height: 0px;   
+    top: -477px;   
   }
   100% {
-    height: 477px;
+    top: 0px;
   }
 }
 `;
@@ -20,17 +19,15 @@ export const Screen = styled.img`
 export const Arm = styled.img`
   position: absolute;
   left: 555px;
-  top: 70px;
-  width: 63px;
-  animation: arm 3s forwards;
+  animation: arm 4s forwards;
   animation-direction: normal;
 
 @keyframes arm {
   0% {
-    height: 0px;   
+    top: -175px;   
   }
   100% {
-    height: 165px;
+    top: 50px;
   }
 }
 `;
