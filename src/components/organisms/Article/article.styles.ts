@@ -5,11 +5,11 @@ type ColumnsProps = {
 }
 
 export const Container = styled.article`
-  position: relative; 
-  width: 800px;
-  height: 470px;
-  left: 51%;
-  transform: translateX(-51%);
+  position: absolute; 
+  top: 120px;
+  left:110px;
+  right:105px;
+  height: 495px;
   overflow: auto;
   ::-webkit-scrollbar {display: none;}
 `;
