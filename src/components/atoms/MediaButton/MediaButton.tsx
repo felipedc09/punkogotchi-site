@@ -9,11 +9,11 @@ type Props = {
 
 const MediaButton: FC<Props> = (props): ReactElement => {
   const { name, imagePath, href } = props;
-
+  const iconSize = 35;
   return (
     <Link passHref href={href}>
       <a href={href}>
-        <img src={imagePath} alt={name} />
+        <img src={imagePath} width={`${iconSize}px`} height={`${iconSize}px`} alt={name} />
       </a>
     </Link>
   );
