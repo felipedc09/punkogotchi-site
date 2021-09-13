@@ -1,6 +1,5 @@
 import { FC, ReactElement } from 'react';
-import MainTemplate from '@/components/templates/Main/MainTemplate';
+import PlayTemplate from '@/components/templates/Play/PlayTemplate';
 
-const Play: FC = (): ReactElement => <MainTemplate page="Play" />;
-
+const Play: FC = (): ReactElement => <PlayTemplate />;
 export default Play;
