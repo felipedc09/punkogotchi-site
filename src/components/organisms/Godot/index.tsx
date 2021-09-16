@@ -3,7 +3,7 @@ import AsyncLoading from './AsyncLoading';
 import { CanvasContainer } from './godot.styles';
 import ReactCanvas from './ReactCanvas';
 
-const useScript = (url, onLoad) => {
+const useScript = (url:string, onLoad: ()=>void) => {
   useEffect(() => {
     const script = document.createElement('script');
 

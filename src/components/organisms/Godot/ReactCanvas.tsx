@@ -12,8 +12,8 @@ export type ReactEngineProps = {
   resize?: boolean;
 };
 
-function toFailure(err: string | Error): PackLoadingAction {
-  const msg = err.message || err;
+function toFailure(err: Error): PackLoadingAction {
+  const msg = err.message;
   console.error(msg);
   return { msg, mode: 'notice', initialized: true };
 }
@@ -28,14 +28,14 @@ const ReactCanvas: FunctionComponent<ReactEngineProps> = ({ engine, execname, wi
       changeLoadingState({ mode: 'indeterminate' });
       setInstance(new engine());
     } else {
-      changeLoadingState(toFailure('WebGL not available'));
+      changeLoadingState(toFailure(new Error('WebGL not available')));
     }
   }, [changeLoadingState, engine]);
 
   const pck = `${execname}.pck`;
 
   useEffect(() => {
-    const customProgress = (current, total) => {
+    const customProgress = (current:number, total:number) => {
       if (total > 0) {
         changeLoadingState({ mode: 'progress', percent: current / total });
       } else {

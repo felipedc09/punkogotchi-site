@@ -49,7 +49,7 @@ type LoadingProps = {
 
 const LoadingContext = createContext<[PackLoadingState, PackLoadingDispatch]>([
   { mode: '', initializing: true },
-  () => {},
+  console.log,
 ]);
 
 export const useLoading = () => useContext(LoadingContext);
