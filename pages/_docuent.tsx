@@ -4,6 +4,9 @@ import Document, { DocumentContext, DocumentInitialProps } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {
+  
+  displayName = 'document';
+
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
     const sheet = new ServerStyleSheet();
     const originalRenderPage = ctx.renderPage;
@@ -29,5 +32,6 @@ class MyDocument extends Document {
     }
   }
 }
+
 
 export default MyDocument;

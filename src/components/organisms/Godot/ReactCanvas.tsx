@@ -12,13 +12,9 @@ export type ReactEngineProps = {
   resize?: boolean;
 };
 
-function toFailure(err: string | Error): PackLoadingAction {
-  let msg;
-  if (typeof err === 'string') {
-    msg = err;
-  } else {
-    msg = err.message;
-  }
+function toFailure(err: Error): PackLoadingAction {
+  const msg = err.message;
+
   console.error(msg);
   return { msg, mode: 'notice', initialized: true };
 }
@@ -34,7 +30,7 @@ const ReactCanvas: FunctionComponent<ReactEngineProps> = ({ engine, execname, wi
       // eslint-disable-next-line new-cap
       setInstance(new engine());
     } else {
-      changeLoadingState(toFailure('WebGL not available'));
+      changeLoadingState(toFailure(new Error('WebGL not available')));
     }
   }, [changeLoadingState, engine]);
 
