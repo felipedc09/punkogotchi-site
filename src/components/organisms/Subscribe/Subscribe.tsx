@@ -8,7 +8,7 @@ const Subscribe: FC = (): ReactElement => {
   return (
     <Form color={color}>
       <Input />
-      <Button text="Subscribe" color={color} iconPath="/static/icons/bell.svg" />
+      <Button text="Subscribe" iconPath="/static/icons/bell.svg" />
     </Form>
   );
 };

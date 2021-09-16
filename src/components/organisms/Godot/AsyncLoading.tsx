@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import * as React from 'react';
 
 import { FunctionComponent, createContext, useContext, useReducer } from 'react';
@@ -18,7 +19,7 @@ export type PackLoadingAction = {
 
 export type PackLoadingDispatch = (action: PackLoadingAction) => void;
 
-const packLoadingReducer = (state: PackLoadingState, action: PackLoadingAction) => {
+const packLoadingReducer = (state: PackLoadingState, action: PackLoadingAction): PackLoadingState => {
   if (!state.initializing) return state;
 
   switch (action.mode) {
@@ -52,7 +53,7 @@ const LoadingContext = createContext<[PackLoadingState, PackLoadingDispatch]>([
   () => {},
 ]);
 
-export const useLoading = () => useContext(LoadingContext);
+export const useLoading = (): [PackLoadingState, PackLoadingDispatch] => useContext(LoadingContext);
 
 const Loading: FunctionComponent<LoadingProps> = ({ notice, percent = 0, indeterminate = false }) => (
   <div id="status">

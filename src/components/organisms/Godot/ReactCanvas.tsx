@@ -13,7 +13,12 @@ export type ReactEngineProps = {
 };
 
 function toFailure(err: string | Error): PackLoadingAction {
-  const msg = err.message || err;
+  let msg;
+  if (typeof err === 'string') {
+    msg = err;
+  } else {
+    msg = err.message;
+  }
   console.error(msg);
   return { msg, mode: 'notice', initialized: true };
 }
@@ -26,6 +31,7 @@ const ReactCanvas: FunctionComponent<ReactEngineProps> = ({ engine, execname, wi
   useEffect(() => {
     if (engine.isWebGLAvailable()) {
       changeLoadingState({ mode: 'indeterminate' });
+      // eslint-disable-next-line new-cap
       setInstance(new engine());
     } else {
       changeLoadingState(toFailure('WebGL not available'));
@@ -35,7 +41,7 @@ const ReactCanvas: FunctionComponent<ReactEngineProps> = ({ engine, execname, wi
   const pck = `${execname}.pck`;
 
   useEffect(() => {
-    const customProgress = (current, total) => {
+    const customProgress = (current: number, total: number): void => {
       if (total > 0) {
         changeLoadingState({ mode: 'progress', percent: current / total });
       } else {

@@ -3,7 +3,6 @@ import { NormalButton } from './button.styles';
 
 type Props = {
   text: string;
-  color?: string;
   iconPath?: string;
 };
 
