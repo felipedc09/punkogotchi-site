@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 
 export const CopyRight = styled.footer`
-    position: absolute;
-    margin: 0 auto;
-    bottom: 0px;
+    position: relative;
+    width: 100%;
     padding: 20px;
+    bottom: 0px;
+    text-align: center;
     color: #fff;
+    background-color: ${props=> props.theme.colors.foreGroundBackground};
 `;

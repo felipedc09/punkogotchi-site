@@ -72,7 +72,14 @@ export const Foreground = styled.img<ForegroundProps>`
       case 'left':
         return 'left: 0';
       case 'bottom':
-        return 'bottom: 0; height:180px; width: 100%';
+        return `
+        bottom: 0; 
+        height:180px; 
+        width: 100%;
+        @media (max-height: 1200px) {
+          display: none;
+        }
+        `;
       case 'right':
         return 'right: 0; bottom: 180px;';
       case 'top-right':
