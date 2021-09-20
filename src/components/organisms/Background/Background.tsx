@@ -52,7 +52,6 @@ const Background: FC<Props> = (props): ReactElement => {
       <Foreground side="right" src="/static/images/mainFgRight.png" alt="Foreground right" />
       <Foreground side="top-left" src="/static/images/mainFgTop_left.png" alt="Foreground top left" />
       <Foreground side="top-right" src="/static/images/mainFgTop_right.png" alt="Foreground top right" />
-      <Foreground side="bottom" src="/static/images/mainFgBottom.png" alt="Foreground top right" />
     </Container>
   );
 };

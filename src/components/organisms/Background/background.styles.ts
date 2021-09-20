@@ -68,27 +68,35 @@ export const Image = styled.img<ImageProps>`
 export const Foreground = styled.img<ForegroundProps>`
   position: absolute;
   ${(props):string => {
+    let position = ''
     switch (props.side) {
       case 'left':
-        return 'left: 0';
-      case 'bottom':
-        return `
-        bottom: 0; 
-        height:180px; 
-        width: 100%;
-        @media (max-height: 1200px) {
-          display: none;
-        }
-        `;
+        position = 'left: 0; bottom: 0;';
+        break
       case 'right':
-        return 'right: 0; bottom: 180px;';
+        position =  'right: 0; bottom: 0;';
+        break
       case 'top-right':
-        return 'top: 0; right: 0;';
+        position =  'top: 0; right: 0;';
+        break
       case 'top-left':
-        return 'top: 0; left: 0;';
+        position =  'top: 0; left: 0;';
+        break
       default:
-        return 'left: 0';
+        position =  'left: 0';
+        break
     }
+    position =`
+    ${position};
+     @media (max-height: 900px) {
+      display: none;
+    }
+    @media (max-width: 1380px) {
+      display: none;
+    }
+
+    `
+    return position
   }}
 `;
 
