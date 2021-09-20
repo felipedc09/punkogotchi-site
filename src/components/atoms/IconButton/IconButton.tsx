@@ -1,18 +1,18 @@
 import { FC, ReactElement } from 'react';
 import Link from 'next/link';
-import { Button } from './iconButton.styles';
+import { useRouter } from 'next/router';
+import { Button, Icon } from './iconButton.styles';
 
 type Props = {
   text: string;
-  iconPath: string;
+  svgIcon: ReactElement;
   size?: number;
   scale?: number;
 };
 
 const IconButton: FC<Props> = (props): ReactElement => {
-  const {
-    text, iconPath, size = 70, scale = 1,
-  } = props;
+  const router = useRouter();
+  const { text, svgIcon, size = 70, scale = 1 } = props;
   const imageSize = size * scale;
 
   return (
@@ -22,9 +22,11 @@ const IconButton: FC<Props> = (props): ReactElement => {
         pathname: `/${text.toLowerCase()}`,
       }}
     >
-      <Button>
+      <Button isSelected={router.pathname === `/${text.toLowerCase()}`}>
         {text}
-        <img src={iconPath} alt={text} height={imageSize} width={imageSize} />
+        <Icon height={imageSize} width={imageSize}>
+          {svgIcon}
+        </Icon>
       </Button>
     </Link>
   );

@@ -1,12 +1,14 @@
 import React, { FC, ReactElement } from 'react';
 import IconButton from '@/components/atoms/IconButton/IconButton';
+import { MenuIcon } from './menuButton.styles';
 
 type Props = {
   view: { name: string };
   size: Size;
+  svgIcon: ReactElement;
 };
 const MenuButton: FC<Props> = (props): ReactElement => {
-  const { view, size } = props;
+  const { view, size, svgIcon } = props;
 
   function assignScale(): number {
     switch (size) {
@@ -21,11 +23,9 @@ const MenuButton: FC<Props> = (props): ReactElement => {
     }
   }
   return (
-    <IconButton
-      text={view.name}
-      iconPath={`/static/icons/menuBar/${view.name.toLowerCase()}.svg`}
-      scale={assignScale()}
-    />
+    <MenuIcon>
+      <IconButton text={view.name} svgIcon={svgIcon} scale={assignScale()} />
+    </MenuIcon>
   );
 };
 
