@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
-export const Screen = styled.img`
-  position: relative;
+export const Screen = styled.div`
+  position: absolute;
   left: 45px;
+  margin-top: 70px;
   animation: screen 3s forwards;
   animation-direction: normal;
 
@@ -14,6 +15,12 @@ export const Screen = styled.img`
     top: 0px;
   }
 }
+`;
+
+export const Scanlines = styled.img`
+  position: absolute;
+  left: 5px;
+  bottom: 15px;
 `;
 
 export const Arm = styled.img`
