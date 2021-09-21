@@ -14,7 +14,6 @@ export type ReactEngineProps = {
 
 function toFailure(err: Error): PackLoadingAction {
   const msg = err.message;
-
   console.error(msg);
   return { msg, mode: 'notice', initialized: true };
 }
