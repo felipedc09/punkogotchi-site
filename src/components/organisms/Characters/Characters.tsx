@@ -23,9 +23,9 @@ const Characters: FC<Props> = (props): ReactElement => {
 
   const setImage = (character: CharacterType): string => {
     if (selectedCharacter === character) {
-      return `/static/images/about/team/about${character.name}Outline.png`;
+      return `/static/images/about/team/about-${character.name}Outline.png`;
     }
-    return `/static/images/about/team/about${character.name}.png`;
+    return `/static/images/about/team/about-${character.name}.png`;
   };
 
   return (
