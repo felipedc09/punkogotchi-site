@@ -1,14 +1,16 @@
 import styled from 'styled-components';
 
 type ButtonProps = {
-  isSelected:boolean
+  isSelected?:boolean
 }
 
 type IconProps = {
   width: number;
   height: number;
 }
+
 const selectedColor = '#F8C53A';
+
 export const Button = styled.a<ButtonProps>`
   display: grid;
   grid-template-rows: 1fr 3fr;
