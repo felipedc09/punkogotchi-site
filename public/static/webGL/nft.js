@@ -767,6 +767,14 @@ const Engine = (function () {
 
 	return SafeEngine;
 }());
+
+function getSomeValue () {
+	console.log('generating a random value');
+	var randomValue = ~~(Math.random()*10000);
+	console.log('random: ', randomValue);
+	return randomValue;
+}
 if (typeof window !== 'undefined') {
 	window['Engine'] = Engine;
 }
+

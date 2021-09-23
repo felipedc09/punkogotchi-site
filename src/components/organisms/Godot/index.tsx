@@ -17,7 +17,7 @@ const useScript = (url: string, onLoad: () => void): void => {
     return () => {
       document.body.removeChild(script);
     };
-  }, [onLoad, url]);
+  }, []);
 };
 
 export type ReactGodotProps = {
