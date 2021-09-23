@@ -2,8 +2,8 @@ import { FC, ReactElement } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import MainTemplate from '@/components/templates/Main/MainTemplate';
 import Article from '@/components/organisms/Article/Article';
-import { Columns, Container, Paragraph } from '@/components/organisms/Article/article.styles';
 import Characters, { CharacterType } from '@/components/organisms/Characters/Characters';
+import { Columns, Container, Paragraph } from '@/components/organisms/Article/article.styles';
 
 type Props = {
   content: {
@@ -24,6 +24,9 @@ type Props = {
         title: string;
         description: string;
       }[];
+    };
+    partners: {
+      title: string;
     };
   };
 };
@@ -75,6 +78,28 @@ const AboutTemplate: FC<Props> = ({ content }): ReactElement => (
                 <p>{column.description}</p>
               </span>
             ))}
+          </Columns>
+        </Paragraph>
+        <br />
+        <br />
+        <h2>{content.faq.title}</h2>
+        <Paragraph>
+          <Columns columnsCount={2}>
+            {content.faq.description.map((column) => (
+              <span key={uuidv4()}>
+                <h3>{column.title}</h3>
+                <p>{column.description}</p>
+              </span>
+            ))}
+          </Columns>
+        </Paragraph>
+        <br />
+        <br />
+        <h2>{content.partners.title}</h2>
+        <Paragraph>
+          <Columns columnsCount={2}>
+            <img src="/static/images/about/partners/aboutChrysalis_guild.png" alt="Chrysalis guild" />
+            <img src="/static/images/about/partners/aboutPerro_viejo.png" alt="Perro Viejo" />
           </Columns>
         </Paragraph>
       </Article>

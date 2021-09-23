@@ -87,6 +87,9 @@ const content = {
       },
     ],
   },
+  partners:{
+    title: 'Partners'
+  }
 };
 
 const About: FC = (): ReactElement => <AboutTemplate content={content} />;

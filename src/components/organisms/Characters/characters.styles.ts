@@ -6,8 +6,8 @@ export const Character = styled.div`
     align-items: center;
 `;
 export const CharacterImage = styled.img`
-    height: 200px;
-    width: 170px;
+    height: auto;
+    width: auto;
 `;
 
 export const SocialNetworks = styled.div`
