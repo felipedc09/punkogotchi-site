@@ -69,32 +69,6 @@ const AboutTemplate: FC<Props> = ({ content }): ReactElement => (
         <Characters characters={content.team.characters} />
         <br />
         <br />
-        <h2>{content.faq.title}</h2>
-        <Paragraph>
-          <Columns columnsCount={2}>
-            {content.faq.description.map((column) => (
-              <span key={uuidv4()}>
-                <h3>{column.title}</h3>
-                <p>{column.description}</p>
-              </span>
-            ))}
-          </Columns>
-        </Paragraph>
-        <br />
-        <br />
-        <h2>{content.faq.title}</h2>
-        <Paragraph>
-          <Columns columnsCount={2}>
-            {content.faq.description.map((column) => (
-              <span key={uuidv4()}>
-                <h3>{column.title}</h3>
-                <p>{column.description}</p>
-              </span>
-            ))}
-          </Columns>
-        </Paragraph>
-        <br />
-        <br />
         <h2>{content.partners.title}</h2>
         <Paragraph>
           <Columns columnsCount={2}>
@@ -102,6 +76,21 @@ const AboutTemplate: FC<Props> = ({ content }): ReactElement => (
             <img src="/static/images/about/partners/aboutPerro_viejo.png" alt="Perro Viejo" />
           </Columns>
         </Paragraph>
+        <br />
+        <br />
+        <h2>{content.faq.title}</h2>
+        <Paragraph>
+          <Columns columnsCount={2}>
+            {content.faq.description.map((column) => (
+              <span key={uuidv4()}>
+                <h3>{column.title}</h3>
+                <p>{column.description}</p>
+              </span>
+            ))}
+          </Columns>
+        </Paragraph>
+        <br />
+        <br />
       </Article>
     </Container>
   </MainTemplate>

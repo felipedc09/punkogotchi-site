@@ -17,7 +17,7 @@ const content = {
     },
   },
   team: {
-    title: 'About the team',
+    title: 'THE TEAM',
     description: {
       p1: 'Our team is formed by a producer, two programmers, and an anrtist-programmer, all from Latin America 〈(^.^)ノ.',
       p2: 'Mushrooms garlic parmesan meatball pepperoni, bacon & tomato pepperoni burnt mouth Chicago style white pizza pan parmesan thin crust. Hand tossed ham chicken wing white pizza thin crust. Garlic sauce mayo stuffed crust spinach NY style platter peppers pepperoni onions pesto beef sausage black olives melted cheese.',
@@ -87,9 +87,9 @@ const content = {
       },
     ],
   },
-  partners:{
-    title: 'Partners'
-  }
+  partners: {
+    title: 'PARTNERS',
+  },
 };
 
 const About: FC = (): ReactElement => <AboutTemplate content={content} />;
