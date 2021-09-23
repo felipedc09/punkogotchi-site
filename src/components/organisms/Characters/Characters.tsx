@@ -2,7 +2,13 @@ import { FC, ReactElement, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import MediaButton from '@/components/atoms/MediaButton/MediaButton';
 import { Columns } from '@/components/organisms/Article/article.styles';
-import { SocialNetworks, CharacterImage, CharacterDescription, Character } from './characters.styles';
+import {
+  SocialNetworks,
+  CharacterImage,
+  CharacterDescription,
+  Character,
+  CharacterImageContainer,
+} from './characters.styles';
 
 export type CharacterType = {
   name: string;
@@ -37,7 +43,9 @@ const Characters: FC<Props> = (props): ReactElement => {
             onMouseOver={() => setSelectedCharacter(character)}
             onFocus={() => setSelectedCharacter(character)}
           >
-            <CharacterImage src={setImage(character)} />
+            <CharacterImageContainer>
+              <CharacterImage src={setImage(character)} />
+            </CharacterImageContainer>
             <h2>{character.name}</h2>
             {character.rol}
             <br />

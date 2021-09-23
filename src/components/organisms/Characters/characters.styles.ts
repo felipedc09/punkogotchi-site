@@ -5,6 +5,11 @@ export const Character = styled.div`
     flex-direction: column;
     align-items: center;
 `;
+
+export const CharacterImageContainer = styled.div`
+    height: 200px;
+`;
+
 export const CharacterImage = styled.img`
     height: auto;
     width: auto;
