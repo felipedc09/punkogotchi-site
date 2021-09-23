@@ -14,11 +14,10 @@ export type ReactEngineProps = {
 
 function toFailure(err: Error): PackLoadingAction {
   const msg = err.message;
-  console.error(msg);
   return { msg, mode: 'notice', initialized: true };
 }
 
-const ReactCanvas: FunctionComponent<ReactEngineProps> = ({ engine, execname, width = 480, height = 300 }) => {
+const ReactCanvas: FunctionComponent<ReactEngineProps> = ({ engine, execname }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [instance, setInstance] = useState<Engine>(null);
   const [loadingState, changeLoadingState] = useLoading();
