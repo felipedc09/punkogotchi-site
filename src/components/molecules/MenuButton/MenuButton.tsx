@@ -6,9 +6,10 @@ type Props = {
   view: { name: string };
   size: Size;
   svgIcon: ReactElement;
+  disabled?: boolean;
 };
 const MenuButton: FC<Props> = (props): ReactElement => {
-  const { view, size, svgIcon } = props;
+  const { view, size, svgIcon, disabled = false } = props;
 
   function assignScale(): number {
     switch (size) {
@@ -24,7 +25,7 @@ const MenuButton: FC<Props> = (props): ReactElement => {
   }
   return (
     <MenuIcon>
-      <IconButton text={view.name} svgIcon={svgIcon} scale={assignScale()} />
+      <IconButton text={view.name} svgIcon={svgIcon} scale={assignScale()} disabled={ disabled }/>
     </MenuIcon>
   );
 };

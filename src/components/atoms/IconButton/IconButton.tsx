@@ -8,18 +8,20 @@ type Props = {
   svgIcon: ReactElement;
   size?: number;
   scale?: number;
+  disabled?: boolean;
 };
 
 const IconButton: FC<Props> = (props): ReactElement => {
   const router = useRouter();
-  const { text, svgIcon, size = 70, scale = 1 } = props;
+  const { text, svgIcon, size = 70, scale = 1, disabled } = props;
+  console.log(text, disabled);
   const imageSize = size * scale;
 
   return (
     <Link
       passHref
       href={{
-        pathname: `/${text.toLowerCase()}`,
+        pathname: disabled?'/':`/${text.toLowerCase()}`,
       }}
     >
       <Button isSelected={router.pathname === `/${text.toLowerCase()}`}>

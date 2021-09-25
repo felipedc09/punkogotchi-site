@@ -12,9 +12,9 @@ const MenuBar: FC = (): ReactElement => {
   const views = [
     { name: 'About', svgIcon: <AboutSVG /> },
     { name: 'Roadmap', svgIcon: <RoadmapSVG /> },
-    { name: 'Play', svgIcon: <PlaySVG /> },
-    { name: 'Tickets', svgIcon: <TicketsSVG /> },
-    { name: 'Whitepaper', svgIcon: <WhitepaperSVG /> },
+    { name: 'Play', svgIcon: <PlaySVG />, disabled: true },
+    { name: 'Tickets', svgIcon: <TicketsSVG />, disabled: true },
+    { name: 'Whitepaper', svgIcon: <WhitepaperSVG />, disabled: true },
   ];
 
   function assignSize(viewName: string): Size {
@@ -28,7 +28,7 @@ const MenuBar: FC = (): ReactElement => {
 
   function createButtons(): ReactElement[] {
     return views.map((view) => (
-      <MenuButton key={uuidv4()} view={view} size={assignSize(view.name)} svgIcon={view.svgIcon} />
+      <MenuButton key={uuidv4()} view={view} size={assignSize(view.name)} svgIcon={view.svgIcon} disabled={ view.disabled }/>
     ));
   }
 

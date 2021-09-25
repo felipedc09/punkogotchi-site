@@ -72,8 +72,12 @@ const AboutTemplate: FC<Props> = ({ content }): ReactElement => (
         <h2>{content.partners.title}</h2>
         <Paragraph>
           <Columns columnsCount={2}>
-            <img src="/static/images/about/partners/aboutChrysalis_guild.png" alt="Chrysalis guild" />
-            <img src="/static/images/about/partners/aboutPerro_viejo.png" alt="Perro Viejo" />
+            <a href='https://chrysalisguild.gg/' target='_blank' rel='noreferrer'>
+              <img src="/static/images/about/partners/aboutChrysalis_guild.png" alt="Chrysalis guild" />
+            </a>
+            <a href='https://www.perroviejogames.com/' target='_blank' rel='noreferrer'>
+              <img src="/static/images/about/partners/aboutPerro_viejo.png" alt="Perro Viejo" />
+            </a>
           </Columns>
         </Paragraph>
         <br />

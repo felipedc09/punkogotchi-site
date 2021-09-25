@@ -6,36 +6,37 @@ const content = {
     title: 'New Festival Town',
     description: {
       p1: 'Turn your crypto-art into a virtual pet to take care of and explore New Festival Town, a place where your NFTs can live and interact with others.',
-      p2: 'Banana peppers pesto sausage hawaiian sausage green bell peppers bacon & tomato chicken wing pork meat lovers bbq sauce. Anchovies pork garlic sauce peppers, pepperoni meatball buffalo sauce lasagna hand tossed string cheese.',
+      p2: 'We created a path to walk from the classic tamagotchi to the cosy life sim, looking for an accessible experience similar to games such as Stardew Valley and Animal Crossing.',
     },
   },
   house: {
     title: 'Da house',
     description: {
-      p1: 'This will be the place where your Chimpoko will live. That ticket you buy to transmute your cryptoart includes the passage to the island we’ve created for your new “pet” and a terrific house for it to live until the town is built.',
-      p2: '  Parmesan mozzarella string cheese philly chicken pork bbq rib bianca marinara. Bacon & tomato broccoli parmesan meatball chicken NY style personal platter white garlic burnt mouth banana peppers buffalo sauce green bell peppers.',
+      p1: 'This will be the place where your NFT will live. That ticket you buy to transmute your cryptoart includes the passage to the island we’ve created for your new “pet” and a comfy house for it to live in until the town is built.',
+      p2: 'Our play-to-earn system is under development. We want you to enjoy your new home, as well as new places. Come to visit and explore.',
     },
   },
   team: {
     title: 'THE TEAM',
     description: {
-      p1: 'Our team is formed by a producer, two programmers, and an anrtist-programmer, all from Latin America 〈(^.^)ノ.',
-      p2: 'Mushrooms garlic parmesan meatball pepperoni, bacon & tomato pepperoni burnt mouth Chicago style white pizza pan parmesan thin crust. Hand tossed ham chicken wing white pizza thin crust. Garlic sauce mayo stuffed crust spinach NY style platter peppers pepperoni onions pesto beef sausage black olives melted cheese.',
+      p1: 'Our team is made up of people who have worked in the video game industry for several years in addition to having working experience in start-ups such as Miroculus, Workera, Globant, Torre, and more.',
+      p2: 'We are creating New Festival Town because we found in blockchain and NFTs a unique opportunity to take video games to a new level, one where the power of the developer is decentralized and built together with the community. We want to build a whole metaverse close at hand with you, the players.',
       p3: '〈( click on each character to know more about us )ノ',
     },
     characters: [
       {
         name: 'agar3s',
-        fullName: 'Giovanni Beltrán',
+        fullName: 'Giovanni',
         rol: 'co-founder',
         shortDescription: 'game developer',
         socialNetworks: [
-          { name: 'Twitter', link: '#' },
-          { name: 'GitHub', link: '#' },
-          { name: 'Itch.io', link: '#' },
+          { name: 'Twitter', link: 'https://twitter.com/agar3s' },
+          { name: 'GitHub', link: 'https://github.com/agar3s' },
+          { name: 'Itch.io', link: 'https://agar3s.itch.io/' },
+          { name: 'Linkedin', link: 'https://www.linkedin.com/in/agares/' },
         ],
         description:
-          'Creator of the famous Evil Glitch. He has a lot of years of experience as a Web developer and gameplay programmer.',
+          'Software engineer and indie game developer, like making games for the sake of art.',
       },
       {
         name: 'maikel',
@@ -43,10 +44,10 @@ const content = {
         rol: 'co-founder',
         shortDescription: 'blockchain developer',
         socialNetworks: [
-          { name: 'Twitter', link: '#' },
-          { name: 'GitHub', link: '#' },
+          { name: 'Twitter', link: 'https://twitter.com/lekiamx' },
+          { name: 'GitHub', link: 'https://www.linkedin.com/in/maikel-navarro-diaz-695659114/' },
         ],
-        description: '??',
+        description: 'Full stack software engineer. Almost 12 years of experience in software development and like 3 years since I started to play with solidity. Love to start the weekend with a Coronita beer.',
       },
       {
         name: 'yuel',
@@ -54,10 +55,11 @@ const content = {
         rol: 'co-founder',
         shortDescription: 'project leader',
         socialNetworks: [
-          { name: 'Twitter', link: '#' },
-          { name: 'Twitch', link: '#' },
+          { name: 'Twitter', link: 'https://twitter.com/yuelwolf' },
+          { name: 'Twitch', link: 'https://www.twitch.tv/yuelwolf' },
+          { name: 'Linkedin', link: 'https://www.linkedin.com/in/andresfrodriguezr/' },
         ],
-        description: 'Le lidero el proyecto',
+        description: 'Guild Master at Chrysalis Guild, CEO of Ashara Studios and Kimochi Games, Software Engineer. Passionate about Complexity Science, lover of Game Design and occasional tester.',
       },
       {
         name: 'carenalga',
@@ -65,27 +67,18 @@ const content = {
         rol: 'co-founder',
         shortDescription: 'game developer',
         socialNetworks: [
-          { name: 'Twitter', link: '#' },
-          { name: 'Behance', link: '#' },
-          { name: 'Itch.io', link: '#' },
+          { name: 'Twitter', link: 'https://twitter.com/mapedorr' },
+          { name: 'Behance', link: 'https://www.behance.net/mapedorr859a' },
+          { name: 'Itch.io', link: 'https://mapedorr.itch.io/' },
+          { name: 'Linkedin', link: 'https://www.linkedin.com/in/mapedorr/' },
         ],
-        description: 'Le pego al pixelart',
+        description: 'Game developer, pixel artist, and co-founder of Perro Viejo games. Loves game design, pizza and drinking alone.',
       },
     ],
   },
   faq: {
-    title: 'FAQ',
-    description: [
-      {
-        title: 'WTF is a NFT?',
-        description:
-          'We don’t know what a NFT is, but we know it gives a lot of money... and we live for making money, doesn’t everyone does?',
-      },
-      {
-        title: 'WTF is CryptoArt?',
-        description: 'It is art in the blockchain.',
-      },
-    ],
+    title: '',
+    description: [],
   },
   partners: {
     title: 'PARTNERS',
