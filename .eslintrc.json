@@ -48,6 +48,7 @@
     "import/extensions": "off",
     "spaced-comment": "off",
     "react/jsx-curly-brace-presence": "warn",
-    "jsx-a11y/anchor-is-valid": "warn"
+    "jsx-a11y/anchor-is-valid": "warn",
+    "@typescript-eslint/no-var-requires": "warn"
   }
 }
