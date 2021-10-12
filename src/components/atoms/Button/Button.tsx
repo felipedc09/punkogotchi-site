@@ -1,4 +1,5 @@
 import React, { FC, ReactElement } from 'react';
+import Link from 'next/link';
 import { NormalButton } from './button.styles';
 
 type Props = {
@@ -17,10 +18,12 @@ const Button: FC<Props> = (props): ReactElement => {
   }
 
   return (
-    <NormalButton>
-      {text}
-      {renderIcon()}
-    </NormalButton>
+    <Link href='' passHref>
+      <NormalButton>
+        {text}
+        {renderIcon()}
+      </NormalButton>
+    </Link>
   );
 };
 

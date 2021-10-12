@@ -12,7 +12,7 @@ const Header: FC<Props> = (props): ReactElement => {
     <Head>
       <title>New Festival Town - {title}</title>
       <meta name="description" content="Turn your crypto-art assets into virtual pets" />
-      <meta property="og:image" content="https://newfestival.town/static/images/home/homeBackground.png" />
+      <meta property="og:image" content="https://newfestival.town/static/images/home/homeBackground2.png" />
       <meta property="og:image" content="https://newfestival.town/static/images/logoHome.png" />
       <meta property="og:image" content="https://newfestival.town/static/images/about/about-house-1.png.png" />
       <meta property="og:image" content="https://newfestival.town/static/images/about/about-in-game-01.png" />

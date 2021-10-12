@@ -7,15 +7,15 @@ const MediaBar: FC = (): ReactElement => {
   const socialMedia = [
     {
       name: 'Discord',
-      href: '#',
+      href: 'https://discord.gg/epvWhYvEhA',
     },
     {
       name: 'Twitter',
-      href: '#',
+      href: 'https://twitter.com/newfestivaltown',
     },
     {
-      name: 'Medium',
-      href: '#',
+      name: 'Substack',
+      href: 'https://town.substack.com/p/welcome-to-new-festival-town?showWelcome=true',
     },
   ];
 
@@ -26,6 +26,8 @@ const MediaBar: FC = (): ReactElement => {
         name={media.name}
         imagePath={`/static/icons/mediaBar/${media.name.toLowerCase()}.svg`}
         href={media.href}
+        target='_blank'
+        rel='noreferrer'
       />
     ));
   }

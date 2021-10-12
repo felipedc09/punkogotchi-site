@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const NormalButton = styled.button`
+export const NormalButton = styled.a`
     padding: 8px 13px 8px 13px;
     display: grid;
     grid-template-columns: 2fr 1fr;
