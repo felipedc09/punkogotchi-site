@@ -24,7 +24,7 @@ const IconButton: FC<Props> = (props): ReactElement => {
         pathname: disabled?'/':`/${text.toLowerCase()}`,
       }}
     >
-      <Button isSelected={router.pathname === `/${text.toLowerCase()}`}>
+      <Button disabled={disabled} isSelected={router.pathname === `/${text.toLowerCase()}`}>
         {text}
         <Icon height={imageSize} width={imageSize}>
           {svgIcon}

@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 type ButtonProps = {
-  isSelected?:boolean
+  isSelected?:boolean,
+  disabled?:boolean
 }
 
 type IconProps = {
@@ -40,6 +41,7 @@ export const Button = styled.a<ButtonProps>`
         transform: scale(1.1);
         color: ${selectedColor};
     `: ''}
+  ${props=>props.disabled ? `svg{fill:rgb(60,60,60)}`:''}
   `;
 
 export const Icon = styled.object<IconProps>`
