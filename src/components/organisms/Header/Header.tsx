@@ -19,6 +19,7 @@ const Header: FC<Props> = (props): ReactElement => {
       <meta property="og:image" content="https://newfestival.town/static/images/about/about-in-game-02.png" />
       <link rel="icon" href="/favicon.ico" />
       <link rel="preload" href="/static/fonts/aweMonoV1/AweMono.ttf" as="font" crossOrigin="" />
+      <script id="mcjs" dangerouslySetInnerHTML={{__html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/82e0f635a15226663dbd47b6d/870e6e09329d124a2e84e429a.js");`}}/>
     </Head>
   );
 };
